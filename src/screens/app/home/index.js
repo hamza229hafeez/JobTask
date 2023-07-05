@@ -16,7 +16,7 @@ console.log(data);
     return (
       <Pressable style={styles.flatview}>
         <Image
-        style={{height:height(20),width:width(44),alignSelf:'center'}}
+        style={styles.imagestyle}
         source={{uri:item.url}}
         />
         <Text style={styles.flattitle}>{item.title}</Text>
@@ -30,6 +30,7 @@ console.log(data);
        
         <FlatList
           data={data}
+          style={{flex:1,width:width(90)}}
           renderItem={renderItem}
           keyExtractor={({ index }) => index}
           numColumns={2}
