@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { LoginScreen } from '~screens/auth';
 import { Loader } from '~components';
 import ScreenNames from './routes';
-import { HomeScreen } from '~screens/app';
+import { AddImage, HomeScreen, ViewImage } from '~screens/app';
 import { selectIsLoggedIn } from '~redux/slices/user';
 const Stack = createNativeStackNavigator();
 
@@ -19,8 +19,10 @@ export default function Routes() {
           <Stack.Screen name={ScreenNames.LOGIN} component={LoginScreen} />
         </Stack.Navigator>
       ) : (
-        <Stack.Navigator initialRouteName={ScreenNames.HOME} screenOptions={{ header: () => false }}>
+        <Stack.Navigator initialRouteName={ScreenNames.HOME} >
           <Stack.Screen name={ScreenNames.HOME} component={HomeScreen} />
+          <Stack.Screen name={ScreenNames.ADDIMAGE} component={AddImage} />
+          <Stack.Screen name={ScreenNames.VIEWIMAGE} component={ViewImage} />
         </Stack.Navigator>
       )}
     </NavigationContainer>

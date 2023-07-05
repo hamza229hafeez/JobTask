@@ -4,6 +4,7 @@ const initialState = {
   token: null,
   isLoggedIn: false,
   userMeta: null,
+  data:[]
 };
 
 const userSlice = createSlice({
@@ -18,6 +19,12 @@ const userSlice = createSlice({
     },
     setIsLoggedIn: (state, action) => {
       state.isLoggedIn = action.payload;
+    },
+    setData: (state, action) => {
+      let temp=[...state.data]
+      temp.push(action.payload)
+
+      state.data=temp;
     },
   },
 });

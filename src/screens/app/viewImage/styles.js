@@ -7,8 +7,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: AppColors.white,
     justifyContent: 'center',
-    alignItems: 'center',
-    padding:width(2)
+    alignItems: 'center'
   },
   title: {
     color: AppColors.black,
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     margin:width(1),
   },
-  flattitle:{
+  title:{
     backgroundColor:'lightgrey',
     padding:width(2),
     borderBottomLeftRadius:width(1),
